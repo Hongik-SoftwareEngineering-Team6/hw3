@@ -3,6 +3,9 @@
 #include "Register.h"
 #include "LogIn.h"
 #include "Member.h"
+#include "CreateRecruitment.h"
+#include "ReadRecruitment.h"
+
 using namespace std;
 
 // 상수 선언
@@ -76,6 +79,23 @@ void doTask()
             }
             }
             break; //level_1의 case2 break
+        }
+        case 3:
+        {
+            switch (menu_level_2)
+            {
+            case 1: // "3.1. 채용 정보 등록" 메뉴 부분
+            {
+                new CreateRecruitment(myMemberList);
+                break;
+            }
+            case 2: // "3.2. 등록된 채용 정보 조회" 메뉴 부분
+            {
+                new ReadRecruitment(myMemberList);
+                break;
+            }
+            }
+            break;
         }
         case 6:
         {

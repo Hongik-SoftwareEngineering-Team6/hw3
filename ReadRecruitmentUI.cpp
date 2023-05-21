@@ -1,28 +1,16 @@
-/**
- * Project hw2
- */
-
-
 #include "ReadRecruitmentUI.h"
 
-/**
- * ReadRecruitmentUI implementation
- */
 
-
-/**
- * @param ReadRecruitment*
- */
-ReadRecruitmentUI::ReadRecruitmentUI(ReadRecruitment*) {
-
+ReadRecruitmentUI::ReadRecruitmentUI(ReadRecruitment* rrCtrl) {
+	this->rrCtrl = rrCtrl;
 }
 
-/**
- * @param work
- * @param recruitingNumber
- * @param deadline
- * @param companyName
- */
-void ReadRecruitmentUI::printRecruitmentInfo(string work, int recruitingNumber, string deadline, string companyName) {
+void ReadRecruitmentUI::userInput() {
+	this->rrCtrl->detectEvent(1);
+}
 
+void ReadRecruitmentUI::printRecruitmentInfo(char* work, int recruitingNumber, char* deadline) {
+	extern FILE* out_fp;
+	fprintf(out_fp, "3.2. 등록된 채용 정보 조회 \n");
+	fprintf(out_fp, "> %s %d %s\n", work, recruitingNumber, deadline);
 }

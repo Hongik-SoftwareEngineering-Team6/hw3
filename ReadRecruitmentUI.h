@@ -15,20 +15,12 @@ using namespace std;
 class ReadRecruitment;
 
 class ReadRecruitmentUI {
+
 public: 
-    
-/**
- * @param ReadRecruitment*
- */
-ReadRecruitmentUI(ReadRecruitment*);
-    
-/**
- * @param work
- * @param recruitingNumber
- * @param deadline
- * @param companyName
- */
-void printRecruitmentInfo(string work, int recruitingNumber, string deadline, string companyName);
+    ReadRecruitmentUI(ReadRecruitment*);
+    void userInput();
+    void printRecruitmentInfo(char* work, int recruitingNumber, char* deadline);
+
 private: 
     ReadRecruitment* rrCtrl;
 };

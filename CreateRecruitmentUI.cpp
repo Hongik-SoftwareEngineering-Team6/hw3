@@ -19,8 +19,8 @@ void CreateRecruitmentUI::getRecruitmentAttributes(char* work, int &recruitingNu
 }
 
 
-void CreateRecruitmentUI::printRecruitmentInfo(char* work, int recruitingNumber, char* deadline, char* companyName) {
+void CreateRecruitmentUI::printRecruitmentInfo(char* work, int recruitingNumber, char* deadline) {
     extern FILE* out_fp;
     fprintf(out_fp, "3.1. 채용 정보 등록\n");
-    fprintf(out_fp, "%s %d %s %s\n", work, recruitingNumber, deadline, companyName);
+    fprintf(out_fp, "> %s %d %s\n", work, recruitingNumber, deadline);
 }

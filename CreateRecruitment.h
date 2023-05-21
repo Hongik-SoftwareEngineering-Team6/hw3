@@ -11,7 +11,7 @@
 #include <string>
 #include <iostream>
 #include "CreateRecruitmentUI.h"
-#include "CompanyMember.h"
+#include "Member.h"
 #include "RecruitmentInfo.h"
 
 using namespace std;
@@ -20,12 +20,11 @@ class CreateRecruitmentUI;
 
 class CreateRecruitment {
 public: 
-
     void detectEvent( int );
-    CreateRecruitment();
+    CreateRecruitment(MemberList*);
 
 private: 
-
+    CompanyMember* nowLoginedMember;
     CreateRecruitmentUI* crUI;
 };
 

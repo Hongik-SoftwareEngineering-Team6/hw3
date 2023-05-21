@@ -1,10 +1,11 @@
 #include "CreateRecruitment.h"
 
 
-CreateRecruitment::CreateRecruitment() {
+CreateRecruitment::CreateRecruitment(MemberList* ml) {
 	//CreateRecruitmentUI* cr = new CreateRecruitmentUI(this);
 	CreateRecruitmentUI cr(this);
 	this->crUI = &cr;
+	this->nowLoginedMember = (CompanyMember*)ml->nowLoginedMember;
 	this->crUI->inputRecuitmentAttribute();
 
 }
@@ -18,12 +19,8 @@ void CreateRecruitment::detectEvent(int) {
 
 	this->crUI->getRecruitmentAttributes(work, recruitingNumber, deadline);
 
-
-	extern CompanyMember cm;
-
-	RecruitmentInfo* riptr = cm.addNewRecruitment(work, recruitingNumber, deadline);
-
+	RecruitmentInfo* riptr = this->nowLoginedMember->addNewRecruitment(work, recruitingNumber, deadline);
 
 	riptr->getRecruitmentInfo(work, recruitingNumber, deadline, companyName);
-	this->crUI->printRecruitmentInfo(work, recruitingNumber, deadline, companyName);
+	this->crUI->printRecruitmentInfo(work, recruitingNumber, deadline);
 }
