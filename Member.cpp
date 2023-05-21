@@ -18,6 +18,11 @@ void Member::getName(char* name) { //남지안 추가
 	strcpy(name, this->name);
 }
 
+void Member::getId(char* id) {
+	strcpy(id, this->id);
+}
+
+
 
 
 

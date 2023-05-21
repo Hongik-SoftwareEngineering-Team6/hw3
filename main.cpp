@@ -5,6 +5,7 @@
 #include "Member.h"
 #include "CreateRecruitment.h"
 #include "ReadRecruitment.h"
+#include "LogOut.h"
 
 using namespace std;
 
@@ -75,6 +76,7 @@ void doTask()
             }
             case 2:  // "2.2. 로그아웃" 메뉴 부분
             {
+                new LogOut(myMemberList);
                 break;
             }
             }

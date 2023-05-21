@@ -22,14 +22,18 @@ public:
 	bool checkLoginSuccess(char*, char*);
 	void printID() { printf("id는 %s\n", this->id); }; //테스트 용 아이디출력
 
-
 	void getName(char*);	//남지안 추가
+	void getId(char*);
 };
+
+
 
 class GeneralMember : public Member {
 public:
 	GeneralMember(char*, char*, char*, char*);
 };
+
+
 
 class CompanyMember : public Member {
 public:
@@ -40,6 +44,8 @@ public:
 private:
 	RecruitmentInfo* recruitmentList[1];//남지안 추가
 };
+
+
 
 class MemberList {
 private:
