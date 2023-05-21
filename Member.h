@@ -7,6 +7,9 @@ using namespace std;
 #define MAX_STRING 32
 #endif
 
+#ifndef _MEMBER_H
+#define _MEMBER_H
+
 class Member {
 private:
 	// 메모리 동적할당 후 null로 초기화
@@ -48,3 +51,5 @@ public:
 	void addMember(Member*);
 	bool checkLogIn(char*, char*);
 };
+
+#endif //_MEMBER_H

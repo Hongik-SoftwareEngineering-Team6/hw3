@@ -1,10 +1,6 @@
-/**
- * Project hw2
- */
 
+#include "Member.h"
 
-#include "GeneralMember.h"
+GeneralMember::GeneralMember(char* name, char* idNumber, char* id, char* password) : Member(name, idNumber, id, password) {
+}
 
-/**
- * GeneralMember implementation
- */
