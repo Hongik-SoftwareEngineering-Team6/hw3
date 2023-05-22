@@ -1,6 +1,7 @@
 // 헤더 선언
 #include <iostream>
 #include "Register.h"
+#include "Unregister.h"
 #include "LogIn.h"
 #include "Member.h"
 #include "CreateRecruitment.h"
@@ -59,6 +60,7 @@ void doTask()
             }
             case 2:  // "1.2. 회원탈퇴" 메뉴 부분
             {
+                new Unregister(myMemberList);
                 break;
             }
             }
@@ -71,7 +73,7 @@ void doTask()
             case 1:   // "2.1. 로그인" 메뉴 부분
             {
                 new LogIn(myMemberList);
-                printf("현재 로그인중인 멤버의 "); myMemberList->nowLoginedMember->printID();
+                printf("현재 로그인중인 멤버의 id는 %s", myMemberList->nowLoginedMember->showID()); // 테스트용 콘솔출력
                 break;
             }
             case 2:  // "2.2. 로그아웃" 메뉴 부분

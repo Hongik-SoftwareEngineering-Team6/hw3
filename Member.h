@@ -19,8 +19,9 @@ private:
 	char* password = (char*)calloc(32, sizeof(char));
 public:
 	Member(char* _name, char* _idNum, char* _id, char* _password);
+	void deleteMemberInfo();
 	bool checkLoginSuccess(char*, char*);
-	void printID() { printf("id는 %s\n", this->id); }; //테스트 용 아이디출력
+	char* showID() { return this->id; };
 
 	void getName(char*);	//남지안 추가
 	void getId(char*);
@@ -55,6 +56,7 @@ public:
 	MemberList() :numMembers(0) {};
 	Member* nowLoginedMember;
 	void addMember(Member*);
+	void deleteMember();
 	bool checkLogIn(char*, char*);
 };
 
