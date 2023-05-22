@@ -6,15 +6,16 @@
 #define _RECRUITMENTINFO_H
 
 #include <string>
-#include <iostream>
 #include <stdio.h>
+
 using namespace std;
 
+// 채용정보 entity class
 class RecruitmentInfo {
-public: 
-    RecruitmentInfo(char* work, int recruitingNumber, char* deadline, char* companyName);
-    void getRecruitmentInfo(char* work, int &recruitingNumber, char* deadline, char* companyName);
 
+public: 
+    RecruitmentInfo(char* work, int recruitingNumber, char* deadline, char* companyName);           //생성자
+    void getRecruitmentInfo(char* work, int &recruitingNumber, char* deadline, char* companyName);  //외부에서 호출하는 채용공고의 정보를 받기위한 함수
 
 private: 
     char work[MAX_STRING];

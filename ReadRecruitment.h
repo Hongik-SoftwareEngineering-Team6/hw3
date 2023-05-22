@@ -11,11 +11,12 @@
 
 class ReadRecruitmentUI;
 
+// 3.2 등록된 채용 정보 조회 control class
 class ReadRecruitment {
 
 public:
-    ReadRecruitment(MemberList* ml);
-    void detectEvent(int);
+    ReadRecruitment(MemberList* ml);    // 생성자
+    void detectEvent(int);              // ReadRecruitmentUI에서 호출하는 사용자 입력 감지시 수행되는 함수
 
 private: 
     ReadRecruitmentUI* rrUI;

@@ -39,10 +39,10 @@ class CompanyMember : public Member {
 public:
 	CompanyMember(char*, char*, char*, char*);
 
-	RecruitmentInfo* listRecruitment(); //남지안 추가
-	RecruitmentInfo* addNewRecruitment(char* work, int recruitingNumber, char* deadline);//남지안 추가
+	RecruitmentInfo* listRecruitment(); 
+	RecruitmentInfo* addNewRecruitment(char* work, int recruitingNumber, char* deadline);
 private:
-	RecruitmentInfo* recruitmentList[1];//남지안 추가
+	RecruitmentInfo* recruitmentList[1];
 };
 
 
