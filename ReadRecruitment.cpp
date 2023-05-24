@@ -13,9 +13,10 @@ void ReadRecruitment::detectEvent(int) {
 	char deadline[MAX_STRING];
 	int recruitingNumber;
 	char companyName[MAX_STRING];
+	char companyIdNumber[MAX_STRING];
 
 	RecruitmentInfo* riptr = this->nowLoginedMember->listRecruitment();
 
-	riptr->getRecruitmentInfo(work, recruitingNumber, deadline, companyName);
+	riptr->getRecruitmentInfo(work, recruitingNumber, deadline, companyName, companyIdNumber);
 	this->rrUI->printRecruitmentInfo(work, recruitingNumber, deadline);
 }

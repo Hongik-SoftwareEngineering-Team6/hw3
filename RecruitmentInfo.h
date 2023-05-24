@@ -14,14 +14,15 @@ using namespace std;
 class RecruitmentInfo {
 
 public: 
-    RecruitmentInfo(char* work, int recruitingNumber, char* deadline, char* companyName);           //생성자
-    void getRecruitmentInfo(char* work, int &recruitingNumber, char* deadline, char* companyName);  //외부에서 호출하는 채용공고의 정보를 받기위한 함수
+    RecruitmentInfo(char* work, int recruitingNumber, char* deadline, char* companyName, char* companyIdNumber);           //생성자
+    void getRecruitmentInfo(char* work, int &recruitingNumber, char* deadline, char* companyName, char* companyIdNumber);  //외부에서 호출하는 채용공고의 정보를 받기위한 함수
 
 private: 
     char work[MAX_STRING];
     int recruitingNumber;
     char deadline[MAX_STRING];
     char companyName[MAX_STRING];
+    char companyIdNumber[MAX_STRING];
 };
 
 #endif //_RECRUITMENTINFO_H

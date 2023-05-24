@@ -23,8 +23,9 @@ public:
 	bool checkLoginSuccess(char*, char*);
 	char* showID() { return this->id; };
 
-	void getName(char*);	//남지안 추가
+	void getName(char*);	
 	void getId(char*);
+	void getIdNumber(char*);
 };
 
 
