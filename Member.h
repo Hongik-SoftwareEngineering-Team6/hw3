@@ -3,6 +3,8 @@
 #include "RecruitmentInfo.h"
 using namespace std;
 
+class RecruitmentInfo;
+
 #ifndef MAX_STRING 
 #define MAX_STRING 32
 #endif
@@ -33,6 +35,15 @@ public:
 class GeneralMember : public Member {
 public:
 	GeneralMember(char*, char*, char*, char*);
+	void apply(RecruitmentInfo* recruitmentInfo);	//임준혁 추가, 리스트 추가, 지원수 증가
+	int getApplicationNumber();	//임준혁 추가
+	void getApplicationInfo(char* companyName, char* idNumber, char* work, int& recruitingNumber, char* deadline, int applicationNumber);
+private:
+	// applicationNumber = 0으로 초기화
+	int applicationNumber;
+	// recruitment의
+	//int applicationList[20];
+	RecruitmentInfo* applicationList[20];	//임준혁 수정
 };
 
 
@@ -59,6 +70,8 @@ public:
 	void addMember(Member*);
 	void deleteMember();
 	bool checkLogIn(char*, char*);
+	CompanyMember* searchCompanyMember(char* companyName); //임준혁 회사 이름으로 회사 포인터 반환
+	CompanyMember* searchCompanyMemberByIdNumber(char* idNumber); // 임준혁 사업자 번호로 회사 찾기
 };
 
 #endif //_MEMBER_H

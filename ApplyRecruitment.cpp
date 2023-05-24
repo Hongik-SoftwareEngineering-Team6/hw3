@@ -1,6 +1,6 @@
 #pragma once
 #include "ApplyRecruitment.h"
-
+class RecruitmentInfo;
 
 ApplyRecruitment::ApplyRecruitment(MemberList* memberList){
 
@@ -33,8 +33,9 @@ ApplyRecruitment::ApplyRecruitment(MemberList* memberList){
 	int recruitingNumber;
 	char deadline[MAX_STRING];
 	char companyName[MAX_STRING];
-	char work[MAX_STRING];
-	recruitmentInfo->getRecruitmentInfo(work, recruitingNumber, deadline, companyName);
+	char newIdNumber[MAX_STRING];
+
+	recruitmentInfo->getRecruitmentInfo(work, recruitingNumber, deadline, companyName, newIdNumber);
 	applyRecruitmentUI.printResult(companyName, idNumber, work);
 }
 

@@ -7,13 +7,17 @@
 #include "CreateRecruitment.h"
 #include "ReadRecruitment.h"
 #include "LogOut.h"
+#include "ApplyRecruitment.h"
+#include "SearchRecruitment.h"
+#include "ReadApplication.h"
+#include <stdio.h>
 
 using namespace std;
 
 // 상수 선언
 #define MAX_STRING 32
 #define INPUT_FILE_NAME "input.txt"
-#define OUTPUT_FILE_NAME "output.txt"
+#define OUTPUT_FILE_NAME "fxdgcfgcff.txt"
 
 // 함수 선언
 void doTask();
@@ -26,8 +30,9 @@ int main()
 {
 	// 파일 입출력을 위한 초기화
     in_fp = fopen(INPUT_FILE_NAME, "r+");
+    cout << in_fp << endl;
     out_fp = fopen(OUTPUT_FILE_NAME, "w+");
-
+    cout << out_fp << endl;
 	doTask();
 
 
@@ -91,11 +96,39 @@ void doTask()
             case 1: // "3.1. 채용 정보 등록" 메뉴 부분
             {
                 new CreateRecruitment(myMemberList);
+                cout << "3.1.";
                 break;
             }
             case 2: // "3.2. 등록된 채용 정보 조회" 메뉴 부분
             {
                 new ReadRecruitment(myMemberList);
+                cout << "3.2.";
+                break;
+            }
+            }
+            break;
+        }
+        case 4:
+        {
+            switch (menu_level_2)
+            {
+            case 1: //4.1. 채용 정보 검색, 사용자에게서 회사 이름을 받아서 채용 정보 출력
+            {         
+                
+                new SearchRecruitment(myMemberList);
+                cout << "4.1.";
+                break;
+            }
+            case 2: //4.2. 채용 지원, 사업자 번호 받아서 회사이름, 사업자번호, 업무 출력
+            {
+                new ApplyRecruitment(myMemberList);
+                cout << "4.2.";
+                break;
+            }
+            case 3: //4.3. 지원 정보 조회, input 없음, 채용정보 리스트 출력
+            {
+                new ReadApplication(myMemberList);
+                cout << "4.3.";
                 break;
             }
             }

@@ -1,5 +1,6 @@
 #pragma once
 #include "SearchRecruitment.h"
+class SearchRecruitment;
 
 class SearchRecruitmentUI {
 public:

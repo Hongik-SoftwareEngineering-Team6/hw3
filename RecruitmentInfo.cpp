@@ -15,4 +15,11 @@ RecruitmentInfo::RecruitmentInfo(char* work, int recruitingNumber, char* deadlin
 	strcpy(this->companyName, companyName);
 	strcpy(this->companyIdNumber, companyIdNumber);
 	this->recruitingNumber = recruitingNumber;
+
+	applicantNumber = 0;
+}
+
+
+void RecruitmentInfo::applied(GeneralMember* generalMember) {
+	this->applicant[applicantNumber++] = generalMember;
 }

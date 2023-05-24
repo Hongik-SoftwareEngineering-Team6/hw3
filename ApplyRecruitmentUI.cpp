@@ -21,5 +21,5 @@ void ApplyRecruitmentUI::getIdNumber(char* idNumber) {
 void ApplyRecruitmentUI::printResult(char* companyName, char* idNumber, char* work) {
 	extern FILE* in_fp, * out_fp;
 	fprintf(out_fp, "4.2. 채용 지원\n");
-	fprintf(out_fp, "< %s %s %s\n", companyName, idNumber, work);
+	fprintf(out_fp, "> %s %s %s\n", companyName, idNumber, work);
 }

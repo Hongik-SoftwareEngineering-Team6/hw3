@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ReadApplication.h"
+class ReadApplication;
 
 class ReadApplicationUI {
 

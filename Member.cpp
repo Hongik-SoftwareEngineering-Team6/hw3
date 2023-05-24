@@ -74,3 +74,25 @@ bool MemberList::checkLogIn(char* id, char* password) {
 		}
 	}
 }
+
+CompanyMember* MemberList::searchCompanyMember(char* companyName) {
+	cout << numMembers << endl;
+	for (int i = 0; i < numMembers; i++) {
+		char name[MAX_STRING];
+		memberList[i]->getName(name);
+		//cout << "searchCompanyMember"<< name;
+		if (!strcmp(companyName, name)) {		//회사 이름이 같다면
+			return (CompanyMember*)memberList[i];	//포인터 반환
+		}
+	}
+}
+
+CompanyMember* MemberList::searchCompanyMemberByIdNumber(char* idNumber) {
+	for (int i = 0; i < numMembers; i++) {
+		char num[MAX_STRING];
+		memberList[i]->getIdNumber(num);
+		if (!strcmp(idNumber, num)) {		//사업자 번호가 같다면
+			return (CompanyMember*)memberList[i];	//포인터 반환
+		}
+	}
+}

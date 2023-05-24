@@ -4,9 +4,10 @@
 #include "Member.h"
 
 ReadApplication::ReadApplication(MemberList* memberList) {
+		
+	this->nowLoginedMember = (GeneralMember*)memberList->nowLoginedMember;
 	ReadApplicationUI readApplication(this);
 	this->readApplicationUI = &readApplication;
-	this->nowLoginedMember = (GeneralMember*)memberList->nowLoginedMember;
 
 	// 지원 개수 구하기
 	int applicationNumber;
@@ -19,6 +20,8 @@ ReadApplication::ReadApplication(MemberList* memberList) {
 	int recruitingNumber;
 	char deadline[MAX_STRING];
 
+	// job 출력
+	readApplicationUI->printJob();
 	//지원 개수만큼 앞에서부터 getApplication call, print
 	for (int i = 0; i < applicationNumber; i++) {
 		nowLoginedMember->getApplicationInfo(companyName, idNumber, work, recruitingNumber, deadline, applicationNumber);

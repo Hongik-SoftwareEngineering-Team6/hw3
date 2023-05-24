@@ -1,7 +1,7 @@
 #pragma once
 #include "ApplyRecruitment.h"
 #define MAX_STRING 32
-
+class ApplyRecruitment;
 class ApplyRecruitmentUI {
 public:
 	ApplyRecruitmentUI(ApplyRecruitment* applyRecruitment);

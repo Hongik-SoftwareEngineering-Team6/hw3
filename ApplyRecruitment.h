@@ -7,6 +7,8 @@
 #ifndef MAX_STRING 
 #define MAX_STRING 32
 #endif
+class ApplyRecruitmentUI;
+class GeneralMember;
 
 class ApplyRecruitment {
 public:

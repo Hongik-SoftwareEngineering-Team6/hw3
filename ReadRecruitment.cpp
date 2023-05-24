@@ -18,5 +18,6 @@ void ReadRecruitment::detectEvent(int) {
 	RecruitmentInfo* riptr = this->nowLoginedMember->listRecruitment();
 
 	riptr->getRecruitmentInfo(work, recruitingNumber, deadline, companyName, companyIdNumber);
+	cout << companyIdNumber << endl;
 	this->rrUI->printRecruitmentInfo(work, recruitingNumber, deadline);
 }

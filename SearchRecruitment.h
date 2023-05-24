@@ -12,5 +12,5 @@ public:
 	void SearchRecruitmentInfo(char* companyName);
 private:
 	SearchRecruitmentUI* searchRecruitmentUI;
-	MemberList memberList;
+	MemberList* memberList;
 };
