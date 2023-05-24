@@ -32,6 +32,9 @@ void Member::getId(char* id) {
 	strcpy(id, this->id);
 }
 
+void Member::getIdNumber(char* idNumber) {
+	strcpy(idNumber, this->idNumber);
+}
 
 
 

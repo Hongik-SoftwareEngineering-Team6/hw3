@@ -16,11 +16,12 @@ void CreateRecruitment::detectEvent(int) {
 	char deadline[MAX_STRING];
 	int recruitingNumber;
 	char companyName[MAX_STRING];
+	char companyIdNumber[MAX_STRING];
 
 	this->crUI->getRecruitmentAttributes(work, recruitingNumber, deadline);
 
 	RecruitmentInfo* riptr = this->nowLoginedMember->addNewRecruitment(work, recruitingNumber, deadline);
 
-	riptr->getRecruitmentInfo(work, recruitingNumber, deadline, companyName);
+	riptr->getRecruitmentInfo(work, recruitingNumber, deadline, companyName, companyIdNumber);
 	this->crUI->printRecruitmentInfo(work, recruitingNumber, deadline);
 }

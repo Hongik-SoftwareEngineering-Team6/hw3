@@ -9,8 +9,10 @@ RecruitmentInfo* CompanyMember::listRecruitment() {
 
 RecruitmentInfo* CompanyMember::addNewRecruitment(char* work, int recruitingNumber, char* deadline) {
 	char cName[MAX_STRING];
+	char cIdNumber[MAX_STRING];
 	this->getName(cName);
-	static RecruitmentInfo ri(work, recruitingNumber, deadline, cName);
+	this->getIdNumber(cIdNumber);
+	static RecruitmentInfo ri(work, recruitingNumber, deadline, cName, cIdNumber);
 	this->recruitmentList[0] = &ri;
 	return this->recruitmentList[0];
 }
