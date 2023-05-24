@@ -27,4 +27,5 @@ ReadApplication::ReadApplication(MemberList* memberList) {
 		nowLoginedMember->getApplicationInfo(companyName, idNumber, work, recruitingNumber, deadline, applicationNumber);
 		readApplicationUI->printApplication(companyName, idNumber, work, recruitingNumber, deadline);
 	}
+	readApplicationUI->makeMargin();
 }

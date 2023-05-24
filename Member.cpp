@@ -49,8 +49,13 @@ void MemberList::addMember(Member* member) {
 
 
 void MemberList::deleteMember() {
-	for (int i = 0; i < numMembers; i++) {		
-		if (!strcmp(nowLoginedMember->showID(), memberList[i]->showID())) { // 로그인중인 멤버의 id가 memberList에 있는 회원값과 같으면			
+	for (int i = 0; i < numMembers; i++) {	
+		char a[32];
+		char b[32];
+		cout << nowLoginedMember  << " " << memberList[i] << endl;
+		nowLoginedMember->getId(a);
+		memberList[i]->getId(b);
+		if (!strcmp(a , b )) { // 로그인중인 멤버의 id가 memberList에 있는 회원값과 같으면			
 			nowLoginedMember->deleteMemberInfo(); // 해당 멤버의 정보 삭제
 
 			// 나머지 멤버들 인덱스 조정
@@ -61,7 +66,8 @@ void MemberList::deleteMember() {
 			numMembers -= 1; // 전체 회원 수 -1			
 			nowLoginedMember = NULL; // 현재 로그인 중인 멤버 없음
 
-			printf("회원탈퇴 완료. 현재 회원 수는 %d\n", numMembers); // 테스트 용 콘솔출력 
+			printf("회원탈퇴 완료. 현재 회원 수는 %d\n", numMembers); // 테스트 용 콘솔출력
+			break;
 		}
 	}
 }

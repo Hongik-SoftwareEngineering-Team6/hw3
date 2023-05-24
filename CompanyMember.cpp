@@ -3,8 +3,9 @@
 CompanyMember::CompanyMember(char* name, char* idNumber, char* id, char* password) : Member(name, idNumber, id, password) {
 }
 
+
 RecruitmentInfo* CompanyMember::listRecruitment() {
-	return this->recruitmentList[0];
+	return this->recruitmentInfo;
 }
 
 RecruitmentInfo* CompanyMember::addNewRecruitment(char* work, int recruitingNumber, char* deadline) {
@@ -12,7 +13,7 @@ RecruitmentInfo* CompanyMember::addNewRecruitment(char* work, int recruitingNumb
 	char cIdNumber[MAX_STRING];
 	this->getName(cName);
 	this->getIdNumber(cIdNumber);
-	static RecruitmentInfo ri(work, recruitingNumber, deadline, cName, cIdNumber);
-	this->recruitmentList[0] = &ri;
-	return this->recruitmentList[0];
+	RecruitmentInfo* ri = new RecruitmentInfo(work, recruitingNumber, deadline, cName, cIdNumber);
+	this->recruitmentInfo = ri;
+	return this->recruitmentInfo;
 }

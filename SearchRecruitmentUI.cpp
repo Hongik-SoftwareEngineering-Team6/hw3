@@ -24,5 +24,5 @@ SearchRecruitmentUI::SearchRecruitmentUI(SearchRecruitment* searchRecruitment) {
 void SearchRecruitmentUI::printRecruitmentInfo(char* companyName, char* idNumber, char* work, int recruitingNumber, char* deadline) {
 	extern FILE* in_fp, * out_fp;
 	fprintf(out_fp, "4.1. 채용 정보 검색\n");
-	fprintf(out_fp, "> %s %s %s %d %s\n", companyName, idNumber, work, recruitingNumber, deadline);
+	fprintf(out_fp, "> %s %s %s %d %s\n\n", companyName, idNumber, work, recruitingNumber, deadline);
 }

@@ -12,7 +12,7 @@ void LogInUI::startInterface() {
 
     // 출력 형식
     fprintf(out_fp, "2.1. 로그인\n");
-    fprintf(out_fp, "> %s %s\n", id, password);
+    fprintf(out_fp, "> %s %s\n\n", id, password);
 }
 void LogInUI::requestLogIn(char* id, char* password) {
     this->pLogIn->requestLogIn(id, password);

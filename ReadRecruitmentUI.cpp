@@ -12,5 +12,5 @@ void ReadRecruitmentUI::userInput() {
 void ReadRecruitmentUI::printRecruitmentInfo(char* work, int recruitingNumber, char* deadline) {
 	extern FILE* out_fp;
 	fprintf(out_fp, "3.2. 등록된 채용 정보 조회 \n");
-	fprintf(out_fp, "> %s %d %s\n", work, recruitingNumber, deadline);
+	fprintf(out_fp, "> %s %d %s\n\n", work, recruitingNumber, deadline);
 }

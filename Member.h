@@ -3,7 +3,7 @@
 #include "RecruitmentInfo.h"
 using namespace std;
 
-class RecruitmentInfo;
+
 
 #ifndef MAX_STRING 
 #define MAX_STRING 32
@@ -12,6 +12,7 @@ class RecruitmentInfo;
 #ifndef _MEMBER_H
 #define _MEMBER_H
 
+class RecruitmentInfo;
 class Member {
 private:
 	// 메모리 동적할당 후 null로 초기화
@@ -55,7 +56,7 @@ public:
 	RecruitmentInfo* listRecruitment(); 
 	RecruitmentInfo* addNewRecruitment(char* work, int recruitingNumber, char* deadline);
 private:
-	RecruitmentInfo* recruitmentList[1];
+	RecruitmentInfo* recruitmentInfo;
 };
 
 

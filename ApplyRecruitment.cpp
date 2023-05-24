@@ -25,8 +25,6 @@ ApplyRecruitment::ApplyRecruitment(MemberList* memberList){
 	// 일반회원 객체 수정
 	this->nowLoginedMember->apply(recruitmentInfo);
 
-	// 채용정보 객체 수정
-	recruitmentInfo->applied(nowLoginedMember);
 
 	// 결과 출력
 	char work[MAX_STRING];

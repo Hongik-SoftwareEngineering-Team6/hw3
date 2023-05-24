@@ -1,5 +1,7 @@
 #include "RecruitmentInfo.h"
 
+RecruitmentInfo::RecruitmentInfo() {
+}
 
 void RecruitmentInfo::getRecruitmentInfo(char* work, int &recruitingNumber, char* deadline, char* companyName, char* companyIdNumber) {
 	strcpy(work, this->work);
@@ -19,7 +21,3 @@ RecruitmentInfo::RecruitmentInfo(char* work, int recruitingNumber, char* deadlin
 	applicantNumber = 0;
 }
 
-
-void RecruitmentInfo::applied(GeneralMember* generalMember) {
-	this->applicant[applicantNumber++] = generalMember;
-}

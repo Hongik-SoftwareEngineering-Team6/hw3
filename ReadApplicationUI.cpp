@@ -13,5 +13,9 @@ void ReadApplicationUI::printJob() {
 
 void ReadApplicationUI::printApplication(char* companyName, char* idNumber, char* work, int& recruitingNumber, char* deadline) {
 	extern FILE* out_fp;
-	fprintf(out_fp, "> %s %d %s %d %s\n", companyName, idNumber, work, recruitingNumber, deadline);
+	fprintf(out_fp, "> %s %s %s %d %s\n", companyName, idNumber, work, recruitingNumber, deadline);
+}
+void ReadApplicationUI::makeMargin(){
+	extern FILE* out_fp;
+	fprintf(out_fp, "\n");
 }

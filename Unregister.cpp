@@ -8,7 +8,8 @@ Unregister::Unregister(MemberList* myMemberList) {
 }
 
 char* Unregister::deleteMember() {
-    char* deletedID = members->nowLoginedMember->showID(); // ÇöÀç ·Î±×ÀÎÁßÀÎ ¸â¹öÀÇ id(°ğ Å»ÅğÇÒ)
+    char deletedID[32];
+    members->nowLoginedMember->getId(deletedID); // ÇöÀç ·Î±×ÀÎÁßÀÎ ¸â¹öÀÇ id(°ğ Å»ÅğÇÒ)
     members->deleteMember();
     return deletedID;
 }

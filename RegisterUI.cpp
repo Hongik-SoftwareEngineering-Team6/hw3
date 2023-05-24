@@ -15,7 +15,7 @@ void RegisterUI::startInterface() {
 
     // 출력 형식
     fprintf(out_fp, "1.1. 회원가입\n");
-    fprintf(out_fp, "> %d %s %s %s %s\n", memberType, name, idNumber, id, password);
+    fprintf(out_fp, "> %d %s %s %s %s\n\n", memberType, name, idNumber, id, password);
 }
 
 void RegisterUI::createMember(int memberType, char* name, char* idNumber, char* id, char* password) {

@@ -11,7 +11,7 @@ void UnregisterUI::startInterface() {
     // Ãâ·Â Çü½Ä
     extern FILE* out_fp;
     fprintf(out_fp, "1.2. È¸¿øÅ»Åð\n");
-    fprintf(out_fp, "> %s\n", deletedID);
+    fprintf(out_fp, "> %s\n\n", deletedID);
 }
 
 char* UnregisterUI::deleteMember() {
