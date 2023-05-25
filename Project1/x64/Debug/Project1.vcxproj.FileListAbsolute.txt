@@ -1,1 +1,2 @@
 D:\NJA\SoftwareEngineering\hw3\hw3\Project1\x64\Debug\Project1.exe
+C:\Users\junhy\git\se_hw3_2\hw3\Project1\x64\Debug\Project1.exe

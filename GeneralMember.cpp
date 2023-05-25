@@ -14,6 +14,6 @@ int GeneralMember::getApplicationNumber() {
 }
 
 void GeneralMember::getApplicationInfo(char* companyName, char* idNumber, char* work, int& recruitingNumber, char* deadline, int applicationNumber) {
-	cout << applicationNumber << endl;
-	this->applicationList[applicationNumber-1]->getRecruitmentInfo(work, recruitingNumber, deadline, companyName, idNumber);
+
+	this->applicationList[applicationNumber]->getRecruitmentInfo(work, recruitingNumber, deadline, companyName, idNumber);
 }

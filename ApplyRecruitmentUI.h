@@ -1,7 +1,9 @@
 #pragma once
 #include "ApplyRecruitment.h"
 #define MAX_STRING 32
-class ApplyRecruitment;
+class ApplyRecruitment;	//전방선언
+
+//4.2. 채용 지원 boundary class
 class ApplyRecruitmentUI {
 public:
 	ApplyRecruitmentUI(ApplyRecruitment* applyRecruitment);

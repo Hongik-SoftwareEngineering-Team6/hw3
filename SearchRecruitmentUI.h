@@ -2,12 +2,12 @@
 #include "SearchRecruitment.h"
 class SearchRecruitment;
 
+// 4.1. 채용 정보 검색 boundary class
 class SearchRecruitmentUI {
 public:
-	//생성자. 사용자 입력 받기 컨트롤의 getRecruitment호출
+
 	SearchRecruitmentUI(SearchRecruitment* searchRecruitment);	
-	//컨트롤에서 호출. 채용정보 출력
-	void printRecruitmentInfo(char* companyName, char* idNumber, char* work, int recruitingNumber, char* deadline);
+	void printRecruitmentInfo(char* companyName, char* idNumber, char* work, int recruitingNumber, char* deadline); // 채용 정보 출력
 private:
 	SearchRecruitment* searchRecruitment;
 };

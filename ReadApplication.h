@@ -1,11 +1,9 @@
 #pragma once
 #include "ReadApplicationUI.h"
 #include "Member.h"
-class ReadApplicationUI;
+class ReadApplicationUI;	//전방선언
 
-/* control에서 로그인이 되어있는 사용자를 찾아
-	그 사용자의 지원정보를 모두 찾아 UI로
-	보내 출력*/
+// 4.3. 지원정보 조회 control class
 class ReadApplication {
 
 private:

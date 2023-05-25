@@ -22,10 +22,12 @@ ReadApplication::ReadApplication(MemberList* memberList) {
 
 	// job 출력
 	readApplicationUI->printJob();
+
 	//지원 개수만큼 앞에서부터 getApplication call, print
 	for (int i = 0; i < applicationNumber; i++) {
-		nowLoginedMember->getApplicationInfo(companyName, idNumber, work, recruitingNumber, deadline, applicationNumber);
+		nowLoginedMember->getApplicationInfo(companyName, idNumber, work, recruitingNumber, deadline, i);
 		readApplicationUI->printApplication(companyName, idNumber, work, recruitingNumber, deadline);
 	}
+	
 	readApplicationUI->makeMargin();
 }
