@@ -15,7 +15,7 @@ using namespace std;
 class RecruitmentInfo;
 class Member {
 private:
-	// ¸Ş¸ğ¸® µ¿ÀûÇÒ´ç ÈÄ null·Î ÃÊ±âÈ­
+	// ë©”ëª¨ë¦¬ ë™ì í• ë‹¹ í›„ nullë¡œ ì´ˆê¸°í™”
 	char* name = (char*)calloc(32, sizeof(char));
 	char* idNumber = (char*)calloc(32, sizeof(char));
 	char* id = (char*)calloc(32, sizeof(char));
@@ -24,7 +24,6 @@ public:
 	Member(char* _name, char* _idNum, char* _id, char* _password);
 	void deleteMemberInfo();
 	bool checkLoginSuccess(char*, char*);
-	char* showID() { return this->id; };
 
 	void getName(char*);	
 	void getId(char*);
@@ -36,15 +35,15 @@ public:
 class GeneralMember : public Member {
 public:
 	GeneralMember(char*, char*, char*, char*);
-	void apply(RecruitmentInfo* recruitmentInfo);	//ÀÓÁØÇõ Ãß°¡, ¸®½ºÆ® Ãß°¡, Áö¿ø¼ö Áõ°¡
-	int getApplicationNumber();	//ÀÓÁØÇõ Ãß°¡
+	void apply(RecruitmentInfo* recruitmentInfo);	//ì„ì¤€í˜ ì¶”ê°€, ë¦¬ìŠ¤íŠ¸ ì¶”ê°€, ì§€ì›ìˆ˜ ì¦ê°€
+	int getApplicationNumber();	//ì„ì¤€í˜ ì¶”ê°€
 	void getApplicationInfo(char* companyName, char* idNumber, char* work, int& recruitingNumber, char* deadline, int applicationNumber);
 private:
-	// applicationNumber = 0À¸·Î ÃÊ±âÈ­
+	// applicationNumber = 0ìœ¼ë¡œ ì´ˆê¸°í™”
 	int applicationNumber;
-	// recruitmentÀÇ
+	// recruitmentì˜
 	//int applicationList[20];
-	RecruitmentInfo* applicationList[20];	//ÀÓÁØÇõ ¼öÁ¤
+	RecruitmentInfo* applicationList[20];	//ì„ì¤€í˜ ìˆ˜ì •
 };
 
 
@@ -71,8 +70,8 @@ public:
 	void addMember(Member*);
 	void deleteMember();
 	bool checkLogIn(char*, char*);
-	CompanyMember* searchCompanyMember(char* companyName); //ÀÓÁØÇõ È¸»ç ÀÌ¸§À¸·Î È¸»ç Æ÷ÀÎÅÍ ¹İÈ¯
-	CompanyMember* searchCompanyMemberByIdNumber(char* idNumber); // ÀÓÁØÇõ »ç¾÷ÀÚ ¹øÈ£·Î È¸»ç Ã£±â
+	CompanyMember* searchCompanyMember(char* companyName); //ì„ì¤€í˜ íšŒì‚¬ ì´ë¦„ìœ¼ë¡œ íšŒì‚¬ í¬ì¸í„° ë°˜í™˜
+	CompanyMember* searchCompanyMemberByIdNumber(char* idNumber); // ì„ì¤€í˜ ì‚¬ì—…ì ë²ˆí˜¸ë¡œ íšŒì‚¬ ì°¾ê¸°
 };
 
 #endif //_MEMBER_H
