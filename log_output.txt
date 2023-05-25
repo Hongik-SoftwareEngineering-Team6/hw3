@@ -1,0 +1,19 @@
+[Im-Jumhyuk] Thu May 25 14:41:59 2023 +0900 임준혁 호류, 주석 수정 597dc2c
+[유채연] Thu May 25 11:10:46 2023 +0900 Member.h에서 showID()삭제 b33d566
+[Jian-Nam] Thu May 25 00:41:21 2023 +0900 남지안 오류 수정 6c0bb32
+[Im-Junhyuk] Wed May 24 22:41:19 2023 +0900 통합 1dd8a3b
+[Im-Junhyuk] Wed May 24 19:25:20 2023 +0900 Merge branch 'main' of https://github.com/Hongik-SoftwareEngineering-Team6/hw3 1daff17
+[Im-Junhyuk] Wed May 24 19:21:18 2023 +0900 임준혁 80e39bf
+[Jian-Nam] Wed May 24 19:18:34 2023 +0900 Merge branch 'main' of https://github.com/Hongik-SoftwareEngineering-Team6/hw3 63b84ad
+[Jian-Nam] Wed May 24 19:17:33 2023 +0900 RecruitmentInfo 에 companyIdNumber 추가 83f71a8
+[uchaen] Mon May 22 21:48:09 2023 +0900 유채연 주석 완료 84da635
+[Jian-Nam] Mon May 22 21:20:28 2023 +0900 Merge branch 'main' of https://github.com/Hongik-SoftwareEngineering-Team6/hw3 7e5c1f1
+[Jian-Nam] Mon May 22 21:20:20 2023 +0900 주석입력 c2b4d7e
+[uchaen] Mon May 22 21:18:51 2023 +0900 회원가입~채용정보조회 구현 완료 670d3e7
+[Jian-Nam] Mon May 22 00:18:00 2023 +0900 로그아웃 구현완료 9e7f43f
+[Jian-Nam] Sun May 21 23:38:45 2023 +0900 Member 클래스 파일 분리(cpp만) 69cd368
+[Jian-Nam] Sun May 21 22:53:22 2023 +0900 등록된채용정보조회 구현완료 11e37b5
+[Jian-Nam] Sun May 21 14:54:45 2023 +0900 채용정보등록 구현 완료 3731135
+[유채연] Sun May 21 13:11:27 2023 +0900 Update README.md 79980ac
+[유채연] Sun May 21 13:07:52 2023 +0900 회원가입, 로그인 구현 완료 03eec80
+[Jian-Nam] Sun May 21 13:01:50 2023 +0900 Initial commit fb5852d

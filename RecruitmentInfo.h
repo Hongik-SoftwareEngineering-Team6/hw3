@@ -25,7 +25,7 @@ private:
     char companyName[MAX_STRING];
     char companyIdNumber[MAX_STRING];
 
-    int applicantNumber;            // 지원자 수
+ 
 
 };
 
